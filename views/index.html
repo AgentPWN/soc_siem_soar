@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      background-color: #f5f7fa;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background: #1a202c;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #cbd5e0;
+      padding: 12px 16px;
+      border-radius: 8px;
+      transition: 0.3s;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .sidebar a:hover {
+      background-color: #2d3748;
+      color: #fff;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top bar */
+    .topbar {
+      background-color: #fff;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .topbar h1 {
+      font-size: 22px;
+      color: #333;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    /* Dashboard cards */
+    .dashboard {
+      padding: 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+
+    .card p {
+      margin: 0;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>My Dashboard</h2>
+    <a href="#">🏠 Home</a>
+    <a href="#">📊 Analytics</a>
+    <a href="#">👥 Users</a>
+    <a href="#">⚙️ Settings</a>
+    <a href="/logout" style="margin-top:auto; color:#f56565;">🚪 Logout</a>
+  </div>
+
+  <div class="main-content">
+    <div class="topbar">
+      <h1>Welcome, Admin</h1>
+      <div class="user">
+        <img src="https://i.pravatar.cc/40" alt="User">
+        <span>admin@example.com</span>
+      </div>
+    </div>
+
+    <div class="dashboard">
+      <div class="card">
+        <h3>Total Users</h3>
+        <p>1,245 Active Users</p>
+      </div>
+
+      <div class="card">
+        <h3>Server Status</h3>
+        <p>✅ All systems operational</p>
+      </div>
+
+      <div class="card">
+        <h3>Recent Logins</h3>
+        <p>Last login: 10 mins ago</p>
+      </div>
+
+      <div class="card">
+        <h3>Alerts</h3>
+        <p>0 security alerts today</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
